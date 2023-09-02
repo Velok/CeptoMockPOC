@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CeptoMock\CeptoMock.csproj" />
     <ProjectReference Include="..\SourceCode\SourceCode.csproj" />
   </ItemGroup>
 

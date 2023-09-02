@@ -1,4 +1,5 @@
-﻿using SourceCode;
+﻿using CeptoMock;
+using SourceCode;
 
 namespace TestCode
 {
@@ -8,6 +9,7 @@ namespace TestCode
         [TestMethod]
         public void TestTestee()
         {
+            Cepto.Mock<TesteeDependency>(d => d.ExecuteVoidMethodWithoutArguments(), 1);
             var testeeDependency = new TesteeDependency();
             var testee = new Testee(testeeDependency);
 
