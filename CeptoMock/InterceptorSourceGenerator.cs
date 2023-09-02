@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
+using System.Reflection;
 
 namespace CeptoMock;
 
@@ -13,7 +14,7 @@ public class InterceptorSourceGenerator : ISourceGenerator
     public void Execute(GeneratorExecutionContext context)
     {
         // Collect all Cepto.Mock statements via reflection
-        var ceptoMockStatements = CollectCeptoMockStatements();
+        var ceptoMockStatements = CollectCeptoMockStatements(context);
         // Iterate through the statements and analyze the important information:
         //   Type to Mock
         //   Method to Mock
@@ -28,10 +29,17 @@ public class InterceptorSourceGenerator : ISourceGenerator
         //   TODO: More details
     }
 
-    private IEnumerable<string> CollectCeptoMockStatements()
+    private IEnumerable<string> CollectCeptoMockStatements(GeneratorExecutionContext context)
     {
-        var ceptoMockStatements = new List<string>();
+        var entryPoint = context.Compilation.GetEntryPoint(context.CancellationToken);
 
-        return ceptoMockStatements;
+        // foreach (var assembly in context.Compilation.Assembly.GetMetadata())
+        // {
+        //     
+        // }
+
+        // var myAssembly = Assembly.LoadFrom(@"..\ProcessLayer.dll");
+
+        return new List<string>();
     }
 }
