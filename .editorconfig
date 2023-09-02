@@ -15,6 +15,9 @@ charset = utf-8-bom
 indent_style = tab
 indent_size = 4
 
+[*.json]
+insert_final_newline = false
+
 [*.DotSettings]
 indent_style = tab
 indent_size = 4

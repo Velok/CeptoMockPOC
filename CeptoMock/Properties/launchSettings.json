@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CodeGeneratorDebug": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\TestCode\\TestCode.csproj"
+    }
+  }
+}
